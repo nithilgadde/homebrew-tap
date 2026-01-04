@@ -8,6 +8,7 @@ class Armada < Formula
 
   depends_on :macos
   depends_on xcode: ["15.0", :build]
+  depends_on "ffmpeg" => :recommended
 
   def install
     system "swift", "build",
@@ -24,8 +25,8 @@ class Armada < Formula
         # Set a wallpaper
         armada set ~/path/to/video.mp4
 
-        # Start the daemon manually
-        armada start
+        # Set wallpaper and resize to screen resolution
+        armada set ~/path/to/video.mp4 --resize-to-screen
 
         # Check status
         armada status
@@ -34,6 +35,8 @@ class Armada < Formula
         armada start
 
       Or create a LaunchAgent (see documentation).
+
+      Note: The --resize-to-screen option requires ffmpeg (installed as recommended dependency).
     EOS
   end
 
