@@ -7,7 +7,6 @@ class Armada < Formula
   head "https://github.com/nithilgadde/armada.git", branch: "master"
 
   depends_on :macos
-  depends_on xcode: ["15.0", :build]
 
   def install
     system "swift", "build",
