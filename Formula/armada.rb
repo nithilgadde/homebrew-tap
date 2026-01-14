@@ -2,7 +2,7 @@ class Armada < Formula
   desc "Native macOS live wallpaper manager - set videos and GIFs as desktop wallpaper"
   homepage "https://github.com/nithilgadde/armada"
   url "https://github.com/nithilgadde/armada.git", branch: "main"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
   head "https://github.com/nithilgadde/armada.git", branch: "main"
 
